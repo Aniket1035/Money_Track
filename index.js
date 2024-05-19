@@ -9,7 +9,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-mongoose.connect('mongodb://localhost:27017/MoneyList')
+// mongoose.connect('mongodb://localhost:27017/MoneyList')
+mongoose.connect('mongodb+srv://aniketpoddar035:HynTFkYGL61i4nvW@cluster0.9fh1huy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 var db = mongoose.connection
 db.on('error', ()=> console.log("Error in connecting to the Database"))
 db.once('open', () => console.log("Connected to Database"))
